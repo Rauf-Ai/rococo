@@ -122,83 +122,12 @@
       <button class="filter-chip active" data-filter="all">Все</button>
       <button class="filter-chip" data-filter="classic">Классические</button>
       <button class="filter-chip" data-filter="modern">Современные</button>
+      <button class="filter-chip" data-filter="loft">Лофт</button>
       <button class="filter-chip" data-filter="corner">Угловые</button>
       <button class="filter-chip" data-filter="island">С островом</button>
     </div>
 
-    <div class="catalog-grid">
-      <article class="kitchen-card reveal" data-tags="classic">
-        <div class="kc-img"><div class="kc-img-inner" style="background:linear-gradient(135deg,#E8DCC0 0%,#C9A66B 100%);"></div><span class="kc-tag">Классика</span></div>
-        <div class="kc-body">
-          <h3>Версаль</h3>
-          <div class="kc-meta"><span>Эмаль + фрезеровка</span><span>Hettich</span></div>
-          <div class="kc-price">от 18 500 ₽ <small>/ погонный метр</small></div>
-          <button class="kc-cta">Рассчитать по своим размерам
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </button>
-        </div>
-      </article>
-
-      <article class="kitchen-card reveal delay-1" data-tags="modern,island">
-        <div class="kc-img"><div class="kc-img-inner" style="background:linear-gradient(135deg,#3E2C1F 0%,#6B5B4F 100%);"></div><span class="kc-tag">С островом</span></div>
-        <div class="kc-body">
-          <h3>Манхэттен</h3>
-          <div class="kc-meta"><span>Soft-touch + камень</span><span>Blum TipOn</span></div>
-          <div class="kc-price">от 26 900 ₽ <small>/ погонный метр</small></div>
-          <button class="kc-cta">Рассчитать по своим размерам
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </button>
-        </div>
-      </article>
-
-      <article class="kitchen-card reveal delay-2" data-tags="modern,corner">
-        <div class="kc-img"><div class="kc-img-inner" style="background:linear-gradient(135deg,#D4C29A 0%,#8B7355 100%);"></div><span class="kc-tag">Угловая</span></div>
-        <div class="kc-body">
-          <h3>Авангард</h3>
-          <div class="kc-meta"><span>Шпон дуба</span><span>Карго-системы</span></div>
-          <div class="kc-price">от 22 400 ₽ <small>/ погонный метр</small></div>
-          <button class="kc-cta">Рассчитать по своим размерам
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </button>
-        </div>
-      </article>
-
-      <article class="kitchen-card reveal delay-1" data-tags="classic,corner">
-        <div class="kc-img"><div class="kc-img-inner" style="background:linear-gradient(135deg,#F0E6D2 0%,#B8961F 100%);"></div><span class="kc-tag">Угловая</span></div>
-        <div class="kc-body">
-          <h3>Прованс</h3>
-          <div class="kc-meta"><span>МДФ + патина</span><span>Витражные секции</span></div>
-          <div class="kc-price">от 15 000 ₽ <small>/ погонный метр</small></div>
-          <button class="kc-cta">Рассчитать по своим размерам
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </button>
-        </div>
-      </article>
-
-      <article class="kitchen-card reveal delay-2" data-tags="modern">
-        <div class="kc-img"><div class="kc-img-inner" style="background:linear-gradient(135deg,#2C2C2C 0%,#D4AF37 130%);"></div><span class="kc-tag">Современная</span></div>
-        <div class="kc-body">
-          <h3>Прима</h3>
-          <div class="kc-meta"><span>Акрил глянец</span><span>Скрытые ручки</span></div>
-          <div class="kc-price">от 19 800 ₽ <small>/ погонный метр</small></div>
-          <button class="kc-cta">Рассчитать по своим размерам
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </button>
-        </div>
-      </article>
-
-      <article class="kitchen-card reveal delay-3" data-tags="modern,island">
-        <div class="kc-img"><div class="kc-img-inner" style="background:linear-gradient(135deg,#FDF8F0 0%,#D4AF37 100%);"></div><span class="kc-tag">С островом</span></div>
-        <div class="kc-body">
-          <h3>Атриум</h3>
-          <div class="kc-meta"><span>Кварц + дуб</span><span>LED-подсветка</span></div>
-          <div class="kc-price">от 31 500 ₽ <small>/ погонный метр</small></div>
-          <button class="kc-cta">Рассчитать по своим размерам
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </button>
-        </div>
-      </article>
-    </div>
+    <div class="catalog-grid" id="catalog-grid"></div>
   </div>
 </section>
 
