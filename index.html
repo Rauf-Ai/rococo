@@ -166,11 +166,25 @@
             <div class="qc-text">
               <div class="q-title">Какой тип кухни вам ближе?</div>
               <div class="q-hint">Выберите стиль — мы подберём подходящие фасады и фурнитуру.</div>
-              <div class="options" data-key="type">
-                <button class="option" data-value="modern">Современный</button>
-                <button class="option" data-value="classic">Классика</button>
-                <button class="option" data-value="loft">Лофт</button>
-                <button class="option" data-value="other">Другой / не определился</button>
+              <div class="options options--photo" data-key="type">
+                <button class="option option--photo" data-value="modern">
+                  <span class="option-photo-wrap"><img src="images/Современная светлая прямая 1.jpg" alt="Современный стиль" /></span>
+                  <span class="option-label">Современный</span>
+                </button>
+                <button class="option option--photo" data-value="classic">
+                  <span class="option-photo-wrap"><img src="images/Классическая светлая угловая 1.webp" alt="Классика" /></span>
+                  <span class="option-label">Классика</span>
+                </button>
+                <button class="option option--photo" data-value="loft">
+                  <span class="option-photo-wrap"><img src="images/Лофт классическая темная угловая 1.jpg" alt="Лофт" /></span>
+                  <span class="option-label">Лофт</span>
+                </button>
+                <button class="option option--photo option--no-photo" data-value="other">
+                  <span class="option-photo-wrap option-photo-wrap--empty">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3m.08 4h.01"/></svg>
+                  </span>
+                  <span class="option-label">Другое</span>
+                </button>
               </div>
             </div>
             <div class="qc-mascot"><div class="qc-mascot-glow"></div><img src="images/beaver_2.png" alt="" /></div>
@@ -183,11 +197,23 @@
             <div class="qc-text">
               <div class="q-title">Какая форма кухни нужна?</div>
               <div class="q-hint">От формы зависит планировка и итоговый метраж рабочей зоны.</div>
-              <div class="options" data-key="shape">
-                <button class="option" data-value="straight">Прямая</button>
-                <button class="option" data-value="corner">Угловая</button>
-                <button class="option" data-value="u">П-образная</button>
-                <button class="option" data-value="island">С островом</button>
+              <div class="options options--schema" data-key="shape">
+                <button class="option option--schema" data-value="straight">
+                  <span class="option-schema-wrap"><img src="images/Прямая кухня (схема).jpg" alt="Прямая" /></span>
+                  <span class="option-label">Прямая</span>
+                </button>
+                <button class="option option--schema" data-value="corner">
+                  <span class="option-schema-wrap"><img src="images/Угловая кухня (схема).jpg" alt="Угловая" /></span>
+                  <span class="option-label">Угловая</span>
+                </button>
+                <button class="option option--schema" data-value="u">
+                  <span class="option-schema-wrap"><img src="images/П образнаякухня (схема).jpg" alt="П-образная" /></span>
+                  <span class="option-label">П-образная</span>
+                </button>
+                <button class="option option--schema" data-value="island">
+                  <span class="option-schema-wrap"><img src="images/кухня с островком (схема).jpg" alt="С островом" /></span>
+                  <span class="option-label">С островом</span>
+                </button>
               </div>
             </div>
             <div class="qc-mascot"><div class="qc-mascot-glow"></div><img src="images/beaver_3.png" alt="" /></div>
@@ -526,6 +552,6 @@
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
 
-<script src="script.js?v=2"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>
