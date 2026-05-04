@@ -147,6 +147,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 100%; height: 100%; object-fit: cover;
   z-index: -2;
   filter: saturate(1.05);
+  /* iOS Safari: ensure cover fill */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .hero::before {
   content: ""; position: absolute; inset: 0; z-index: -1;
@@ -1335,46 +1338,156 @@ input[type="range"]::-moz-range-thumb {
 .back-top:hover { transform: translateY(-4px); }
 
 /* =================  MOBILE  ================= */
+
+/* Touch: always show slider arrows (hover doesn't exist on touch) */
+@media (hover: none) {
+  .kc-prev, .kc-next { opacity: 1; }
+}
+
+/* Eliminate 300ms tap delay on all interactive elements */
+button, a, input, label, [role="button"] { touch-action: manipulation; }
+
+/* ---- ≤ 960px: Tablet ---- */
 @media (max-width: 960px) {
-  .header-right .phone, .header-right .rating .label { display: none; }
-  .header-right { gap: 12px; }
-  .hero { min-height: 600px; padding: 60px 0; }
+  /* Section padding */
+  .mascot-intro, .catalog, .quiz, .materials,
+  .consult, .production, .guarantees, .reviews { padding: 72px 0; }
+  .about-production { padding: 72px 0; }
+
+  /* Header */
+  .header-right .phone { display: none; }
+  .header-right .rating .label { display: none; }
+  .header-right { gap: 10px; }
+
+  /* Hero */
+  .hero { min-height: 540px; padding: 56px 0; }
   .limited-badge { right: 16px; bottom: 16px; padding: 10px 14px; font-size: 12px; }
 
-  .mascot-intro-grid,
-  .quiz-grid,
-  .consult-grid,
-  .production-head,
-  .stage-content { grid-template-columns: 1fr; gap: 32px; }
+  /* About production */
   .ap-stats { grid-template-columns: repeat(2, 1fr); }
-  .about-production { padding: 80px 0; }
   .about-production h2 { font-size: 32px; }
   .ap-stat { padding: 20px; }
   .ap-stat-value { font-size: 34px; }
+
+  /* Mascot intro */
+  .mascot-intro-grid { grid-template-columns: 1fr; gap: 32px; }
+  .mascot-intro-img-wrap { order: -1; }
+  .mascot-intro-img { max-height: 260px; }
+
+  /* Catalog: 2 cols on tablet */
+  .catalog-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+  /* Materials/Guarantees: 2 cols on tablet */
+  .materials-grid { grid-template-columns: repeat(2, 1fr); }
+  .guarantees-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Reviews: 1 col */
+  .reviews-grid { grid-template-columns: 1fr; }
+
+  /* Production */
+  .production-head { grid-template-columns: 1fr; gap: 12px; }
   .production-head .pill { justify-self: start; }
+  .stage-content { grid-template-columns: 1fr; gap: 24px; padding: 28px; }
+  .stage-content .stage-num { font-size: 56px; }
+  .stage-image { order: -1; max-height: 220px; overflow: hidden; }
+  .stage-image img { max-height: 200px; margin: 0 auto; }
+
+  /* Quiz */
+  .quiz-grid { grid-template-columns: 1fr; gap: 24px; }
   .quiz-aside { padding: 24px; }
   .quiz-panel { padding: 24px; min-height: 0; }
   .quiz-content { grid-template-columns: 1fr; }
   .qc-mascot { display: none; }
-  .options { grid-template-columns: 1fr; }
+  .options { grid-template-columns: 1fr 1fr; }
 
-  .catalog-grid,
-  .materials-grid,
-  .guarantees-grid,
-  .reviews-grid { grid-template-columns: 1fr; }
+  /* Consult: hide mascot, 2-col */
+  .consult-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .consult-mascot { display: none; }
 
+  /* Footer */
   .footer-grid { grid-template-columns: 1fr 1fr; }
-  .stage-content { padding: 24px; }
-  .stage-content .stage-num { font-size: 56px; }
 }
 
-@media (max-width: 560px) {
+/* ---- ≤ 640px: Phone ---- */
+@media (max-width: 640px) {
+  /* Section padding */
+  .mascot-intro, .catalog, .quiz, .materials,
+  .consult, .production, .guarantees, .reviews,
+  .about-production { padding: 56px 0; }
+
+  /* Grids → 1 col */
+  .catalog-grid,
+  .materials-grid,
+  .guarantees-grid { grid-template-columns: 1fr; gap: 12px; }
+
+  /* Consult: stack */
+  .consult-grid { grid-template-columns: 1fr; }
+
+  /* Options → 1 col on small phones; photo/schema keep 2×2 */
+  .options { grid-template-columns: 1fr; }
+  .options--photo,
+  .options--schema { grid-template-columns: repeat(2, 1fr); }
+
+  /* Filters: horizontal scroll */
+  .filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-left: -16px; margin-right: -16px;
+    padding-left: 16px; padding-right: 16px;
+  }
+  .filters::-webkit-scrollbar { display: none; }
+  .filter-chip { flex-shrink: 0; padding: 10px 16px; font-size: 13px; }
+
+  /* Always show slider arrows on mobile */
+  .kc-prev, .kc-next { opacity: 1; width: 32px; height: 32px; }
+  .kc-prev svg, .kc-next svg { width: 14px; height: 14px; }
+
+  /* Stage tabs: smaller */
+  .stage-tab { padding: 10px 16px; font-size: 13px; }
+
+  /* Quiz aside: hide on small phone */
+  .quiz-aside { display: none; }
+
+  /* Consult form padding */
+  .consult-form { padding: 24px; }
+}
+
+/* ---- ≤ 480px: Small phone ---- */
+@media (max-width: 480px) {
   .container { padding: 0 16px; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .header-inner { gap: 12px; }
+  .header-inner { gap: 8px; }
+  .logo-mark { width: 38px; height: 38px; font-size: 17px; }
+  .logo-text .brand { font-size: 17px; }
   .logo-text .sub { display: none; }
-  .cta { padding: 16px 24px; font-size: 14px; width: 100%; justify-content: center; }
-  .hero-fineprint { gap: 12px; }
-  .quiz-nav { flex-wrap: wrap; }
+
+  .hero { min-height: 100svh; }
+  h1.hero-title { font-size: clamp(28px, 7.5vw, 42px); }
+  .hero-sub { font-size: 15px; }
+  .gift-list li { font-size: 14px; }
+  .cta { padding: 16px 22px; font-size: 14px; width: 100%; justify-content: center; }
+  .hero-fineprint { gap: 10px; font-size: 12px; }
+  .hero-joke { font-size: 12px; }
+
+  .ap-stat-value { font-size: 28px; }
+  .ap-cta-primary, .ap-cta-ghost { padding: 15px 20px; font-size: 14px; width: 100%; justify-content: center; }
+  .ap-actions { flex-direction: column; }
+
+  .section-head h2 { font-size: clamp(24px, 6.5vw, 32px); }
+
+  .quiz-panel { padding: 18px; }
+  .quiz-nav { flex-wrap: wrap; gap: 10px; }
   .btn-next, .btn-submit, .btn-back { width: 100%; justify-content: center; }
+
+  .stage-content { padding: 20px; }
+
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 8px; }
+
+  .modal { padding: 24px; }
+
+  .back-top { right: 14px; bottom: 14px; width: 44px; height: 44px; }
 }

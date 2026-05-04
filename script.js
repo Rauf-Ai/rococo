@@ -205,10 +205,13 @@
     if (window.scrollY > 300) bt.classList.add('show');
     else bt.classList.remove('show');
 
-    const video = document.querySelector('.hero-video');
-    if (video) {
-      const y = Math.min(window.scrollY * 0.25, 200);
-      video.style.transform = `translateY(${y}px) scale(1.05)`;
+    // parallax only on desktop — on mobile it degrades performance and causes iOS glitches
+    if (window.innerWidth > 768) {
+      const video = document.querySelector('.hero-video');
+      if (video) {
+        const y = Math.min(window.scrollY * 0.25, 200);
+        video.style.transform = `translateY(${y}px) scale(1.05)`;
+      }
     }
   };
   window.addEventListener('scroll', onScroll, { passive: true });
