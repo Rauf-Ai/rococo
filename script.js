@@ -148,7 +148,7 @@
     const delays = ['', ' delay-1', ' delay-2'];
     kitchens.forEach((k, ki) => {
       const article = document.createElement('article');
-      article.className = 'kitchen-card reveal' + delays[ki % 3];
+      article.className = 'kitchen-card';
       article.dataset.tags = k.tags;
 
       const hasMany = k.photos.length > 1;
