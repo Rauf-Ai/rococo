@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Рассчитать стоимость мебели — Rococo Mebell</title>
+<meta name="description" content="Узнайте стоимость кухни или шкафа за 1 минуту. Бесплатный 3D-проект, замер и скидка 5% на первый заказ." />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23D4AF37'/><text x='50' y='62' text-anchor='middle' font-family='Manrope,sans-serif' font-weight='800' font-size='44' fill='white'>R</text></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="quiz.css" />
+</head>
+<body>
+
+<!-- =====================================================
+     SCREEN: LANDING
+     ===================================================== -->
+<div class="screen active" id="screen-landing">
+  <div class="container">
+    <!-- Header -->
+    <div class="landing-header">
+      <div class="landing-logo">
+        <div class="logo-mark">R</div>
+        <div>
+          <div class="brand-name">ROCOCO MEBELL</div>
+          <div class="brand-sub">Мебель на заказ · Москва и МО</div>
+        </div>
+      </div>
+      <div class="yandex-badge">
+        <span class="star">★★★★★</span>
+        <span><b>4.9</b> на Яндекс Картах</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ticker -->
+  <div class="ticker" style="margin:18px 0 0;">
+    <div class="ticker-inner" id="ticker-inner">
+      <span class="ticker-item"><span class="ticker-dot">🏭</span>Производство 20 000 м²</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span></span>
+      <span class="ticker-item"><span class="ticker-dot">📅</span>Более 20 лет на рынке</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span></span>
+      <span class="ticker-item"><span class="ticker-dot">🔧</span>Любые материалы и фурнитура по вашему проекту</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span></span>
+      <span class="ticker-item"><span class="ticker-dot">🪑</span>Любая корпусная мебель на заказ по индивидуальным размерам</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span></span>
+      <span class="ticker-item"><span class="ticker-dot">🎁</span>Гарантия 12 месяцев · Рассрочка 0%</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span></span>
+      <!-- duplicate for seamless loop -->
+      <span class="ticker-item"><span class="ticker-dot">🏭</span>Производство 20 000 м²</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span></span>
+      <span class="ticker-item"><span class="ticker-dot">📅</span>Более 20 лет на рынке</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span></span>
+      <span class="ticker-item"><span class="ticker-dot">🔧</span>Любые материалы и фурнитура по вашему проекту</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span></span>
+      <span class="ticker-item"><span class="ticker-dot">🪑</span>Любая корпусная мебель на заказ по индивидуальным размерам</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span></span>
+      <span class="ticker-item"><span class="ticker-dot">🎁</span>Гарантия 12 месяцев · Рассрочка 0%</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span></span>
+    </div>
+  </div>
+
+  <!-- Main offer -->
+  <div class="container">
+    <div class="landing-hero">
+      <h1>Узнайте стоимость<br><span class="accent">вашей мебели</span> за 1 минуту</h1>
+      <p class="sub">В конце опроса — гарантированный подарок и приятные акции 🎁</p>
+      <button class="btn-start" id="btn-start">
+        Сделать просчёт
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <!-- Carousel -->
+    <div class="carousel-section">
+      <div class="carousel-offer">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Сотни довольных клиентов — и ты в этом списке!
+      </div>
+
+      <div class="carousel-wrap">
+        <div class="carousel" id="carousel">
+          <div class="carousel-slide">
+            <img src="images/Кейс 1.webp" alt="Угловая кухня" loading="lazy" />
+            <div class="carousel-caption">
+              <div class="proj-name">Угловая кухня классика</div>
+              <div class="proj-jk">ЖК «Столичный» · Москва</div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Кейс 2.jpg" alt="Кухня с островом" loading="lazy" />
+            <div class="carousel-caption">
+              <div class="proj-name">Кухня с полуостровом</div>
+              <div class="proj-jk">ЖК «Флотилия» · Москва</div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Кейс 3.jpg" alt="Гардеробная" loading="lazy" />
+            <div class="carousel-caption">
+              <div class="proj-name">Гардеробная комната</div>
+              <div class="proj-jk">ЖК «Мичуринский» · Москва</div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Кейс 4.jpg" alt="Шкаф в прихожую" loading="lazy" />
+            <div class="carousel-caption">
+              <div class="proj-name">Шкаф-купе в прихожую</div>
+              <div class="proj-jk">ЖК «Алые Паруса» · Москва</div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Кейс 5.webp" alt="Классическая кухня" loading="lazy" />
+            <div class="carousel-caption">
+              <div class="proj-name">Классическая светлая кухня</div>
+              <div class="proj-jk">ЖК «Оранж» · Москва</div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Кейс 6.webp" alt="Кухня лофт" loading="lazy" />
+            <div class="carousel-caption">
+              <div class="proj-name">Кухня в стиле лофт</div>
+              <div class="proj-jk">ЖК «Ривер Парк» · Москва</div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Кейс 7.jpg" alt="Встроенный шкаф" loading="lazy" />
+            <div class="carousel-caption">
+              <div class="proj-name">Встроенный шкаф в спальню</div>
+              <div class="proj-jk">ЖК «Наследие» · Москва</div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-prev" id="carousel-prev" aria-label="Назад">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <button class="carousel-next" id="carousel-next" aria-label="Далее">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <div class="carousel-dots" id="carousel-dots"></div>
+    </div>
+  </div><!-- /container -->
+</div><!-- /screen-landing -->
+
+
+<!-- =====================================================
+     SCREEN: PRODUCT SELECTION
+     ===================================================== -->
+<div class="screen" id="screen-product">
+  <nav class="quiz-nav">
+    <div class="quiz-nav-logo">
+      <div class="logo-mark">R</div>
+      <div>
+        <div class="brand-name">ROCOCO MEBELL</div>
+        <div class="brand-sub">Мебель на заказ</div>
+      </div>
+    </div>
+    <div class="quiz-nav-actions">
+      <button class="btn-home" onclick="goHome()">🏠 Главное меню</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="product-screen">
+      <h2>Что будем делать?</h2>
+      <p class="sub">Выберите тип мебели — и мы подберём идеальный вариант для вас</p>
+
+      <div class="product-cards">
+        <button class="product-card" onclick="startKitchen()">
+          <div class="pc-icon">🍳</div>
+          <h3>Кухня</h3>
+          <p>Проектируем кухни любой сложности, формы и стиля</p>
+          <div class="pc-arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </div>
+        </button>
+        <button class="product-card" onclick="startWardrobe()">
+          <div class="pc-icon">🗄️</div>
+          <h3>Шкаф / Гардеробная</h3>
+          <p>Встроенные шкафы, шкафы-купе и гардеробные комнаты</p>
+          <div class="pc-arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div><!-- /screen-product -->
+
+
+<!-- =====================================================
+     SCREEN: KITCHEN QUIZ
+     ===================================================== -->
+<div class="screen" id="screen-kitchen">
+  <nav class="quiz-nav">
+    <div class="quiz-nav-logo">
+      <div class="logo-mark">R</div>
+      <div>
+        <div class="brand-name">ROCOCO MEBELL</div>
+      </div>
+    </div>
+    <div class="quiz-nav-actions">
+      <button class="btn-back-nav" id="k-btn-back" onclick="kitchenBack()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Назад
+      </button>
+      <button class="btn-home" onclick="goHome()">Главное меню</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="quiz-body">
+      <div class="quiz-progress">
+        <div class="quiz-progress-label">Шаг <b id="k-step-cur">1</b> из <b>7</b></div>
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill" id="k-progress-fill" style="width:14%"></div>
+        </div>
+      </div>
+
+      <!-- Dynamic content rendered by JS -->
+      <div id="kitchen-step-content"></div>
+
+      <div class="quiz-footer" id="k-quiz-footer">
+        <button class="btn-next-quiz" id="k-btn-next" onclick="kitchenNext()" disabled>
+          Далее
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <button class="btn-submit-quiz" id="k-btn-submit" onclick="kitchenSubmit()" style="display:none" disabled>
+          Получить подарок 🎁
+        </button>
+      </div>
+    </div>
+  </div>
+</div><!-- /screen-kitchen -->
+
+
+<!-- =====================================================
+     SCREEN: WARDROBE QUIZ
+     ===================================================== -->
+<div class="screen" id="screen-wardrobe">
+  <nav class="quiz-nav">
+    <div class="quiz-nav-logo">
+      <div class="logo-mark">R</div>
+      <div>
+        <div class="brand-name">ROCOCO MEBELL</div>
+      </div>
+    </div>
+    <div class="quiz-nav-actions">
+      <button class="btn-back-nav" id="w-btn-back" onclick="wardrobeBack()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Назад
+      </button>
+      <button class="btn-home" onclick="goHome()">Главное меню</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="quiz-body">
+      <div class="quiz-progress">
+        <div class="quiz-progress-label">Шаг <b id="w-step-cur">1</b> из <b>7</b></div>
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill" id="w-progress-fill" style="width:14%"></div>
+        </div>
+      </div>
+
+      <div id="wardrobe-step-content"></div>
+
+      <div class="quiz-footer" id="w-quiz-footer">
+        <button class="btn-next-quiz" id="w-btn-next" onclick="wardrobeNext()" disabled>
+          Далее
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <button class="btn-submit-quiz" id="w-btn-submit" onclick="wardrobeSubmit()" style="display:none" disabled>
+          Получить подарок 🎁
+        </button>
+      </div>
+    </div>
+  </div>
+</div><!-- /screen-wardrobe -->
+
+<script src="quiz.js"></script>
+</body>
+</html>
